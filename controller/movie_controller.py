@@ -5,7 +5,7 @@ from flask import request
 movie_obj = MovieModel()
 auth = AuthModel()
 
-@app.route('/movie/add')
+@app.route('/movie/add', methods=['POST'])
 @auth.token_auth()
 def movie_add_controller():
     return movie_obj.movie_add_model(request.json)
