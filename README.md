@@ -4,7 +4,7 @@
 ### Language- Python, Flask
 ### Database- MySQL
 ## Setup Instruction
-You can name your virtual environment as you wish, but I would recommend naming it 'MovieEnv'. I've added 'MovieEnv' to my .gitignore file to prevent environment files from being pushed to the remote repository.
+You can name your virtual environment as you wish, but I would recommend naming it 'MovieRating'. I've added 'MovieRating' to my .gitignore file to prevent environment files from being pushed to the remote repository.
 Step-1: Creating & activating venv Windows:
 ```
 python -m venv env
