@@ -1,13 +1,16 @@
+import os
+from dotenv import load_dotenv, dotenv_values
 import mysql.connector
 import json
 from flask import make_response, jsonify
 from datetime import datetime, timedelta
 import jwt
+load_dotenv()
 
 class UserModel():
     def __init__(self):
         try:
-            self.con = mysql.connector.connect(host="sql6.freesqldatabase.com",user="sql6696109",password="kR52xyVGF9",database="sql6696109")
+            self.con = mysql.connector.connect(host=os.getenv('HOST'),port=os.getenv('PORT_NUMBER'),user=os.getenv('DATABASE_USER'),password=os.getenv('DATABASE_PASSWORD'),database=os.getenv('DATABASE_NAME'))
             self.con.autocommit = True
             self.cur=self.con.cursor(dictionary=True)
             print("Connection Successful")
